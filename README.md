@@ -1,3 +1,1 @@
-
-==============
-Fork of [cassidoo.co](http://cassidoo.co)
+Brian Mickel Portfolio Site
