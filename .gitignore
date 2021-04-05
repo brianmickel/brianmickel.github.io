@@ -1,2 +1,5 @@
 # macOS General
 .DS_Store
+
+# nodeJS
+node_modules

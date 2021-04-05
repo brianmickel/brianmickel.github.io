@@ -1,0 +1,8 @@
+---
+layout: layout.liquid
+pageTitle: Brian Mickel
+---
+{% for project in collections.projects %}
+    <h2><a href="{{ project.url }}">{{ project.data.pageTitle }}</a></h2>
+    <em>{{ project.date | date: "%Y-%m-%d" }}</em>
+{% endfor %}

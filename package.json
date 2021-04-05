@@ -1,0 +1,16 @@
+{
+  "name": "portfolio-site",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "rm -rf _site && eleventy",
+    "serve": "eleventy --serve",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Brian Mickel",
+  "license": "UNLICENSED",
+  "devDependencies": {
+    "@11ty/eleventy": "^0.12.1"
+  }
+}
