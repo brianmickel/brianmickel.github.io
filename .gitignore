@@ -3,3 +3,6 @@
 
 # nodeJS
 node_modules
+
+# @11ty
+_site
