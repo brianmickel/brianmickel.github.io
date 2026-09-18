@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Set Check · Brian Mickel</title>
+  <title>Set finder · Brian Mickel</title>
   
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -19,14 +19,13 @@
   <main>
     <article class="entry">
   <header class="entry-head">
-    <h1 class="entry-title">Set Check</h1>
+    <h1 class="entry-title">Set finder</h1>
     <p class="entry-meta">
-      <time datetime="2025-12-14">2025-12-14</time>
-      <a href="/games/">Board games</a><a href="https://github.com/brianmickel/set-check">Repository</a><a href="https://brianmickel.io/set-check/">Live</a></p><p class="entry-summary">Photograph the board, find out whether a set remains.</p></header>
+      <time datetime="2018-10-08">2018-10-08</time>
+      <a href="/games/">Board games</a><a href="https://github.com/brianmickel/set-game-set-finder">Repository</a></p><p class="entry-summary">A Python CLI that tells you whether a set is on the table, without telling you which.</p></header>
   <div class="prose">
-    <p>Is there a set left? A quick tool to confirm there isn't one on the board before you call it.</p>
-<p>Take a photo of the cards, the app identifies them and answers &quot;has set?&quot;. React and Vite on the front end, a Cloudflare Worker handling upload and analysis with OpenAI Vision behind it.</p>
-<p>This is the second time I've built this. The <a href="/projects/set-game-set-finder/">first</a> was a 2018 Python CLI that took the cards as a text file, and whose readme already listed &quot;image upload to website&quot; as stage three of the plan.</p>
+    <p>Cards go in a text file as four-character codes, one per line (<code>ps3l</code>: purple, squiggle, three, striped). The script reports &quot;Set(s) Found&quot; or &quot;No Sets Found&quot; and deliberately stops there, so you can keep looking.</p>
+<p>The readme from 2018 sketched four stages: a CLI, a web version, image upload, and eventually a phone pointed at the table like a bank check deposit. <a href="/projects/set-check/">Set Check</a>, seven years later, is stage three.</p>
   </div>
 </article>
 
