@@ -1,0 +1,22 @@
+---
+layout: base.liquid
+description: "Software engineer. I build things and write down what I learn along the way."
+---
+<section class="hero">
+  <h1 class="name" data-field>{{ site.name }}</h1>
+  <p class="tagline">{{ site.tagline }}</p>
+</section>
+
+<ol class="stream" aria-label="Everything, newest first">
+  {%- assign prev_year = "" -%}
+  {%- for entry in collections.stream -%}
+    {%- assign y = entry.date | year -%}
+    {%- if y != prev_year -%}
+      <li class="year" aria-hidden="true">{{ y }}</li>
+      {%- assign prev_year = y -%}
+    {%- endif -%}
+    {% include "row.liquid" %}
+  {%- endfor -%}
+</ol>
+
+<script src="/assets/field.js" defer></script>

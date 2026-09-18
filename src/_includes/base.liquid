@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% if title %}{{ title }} · {% endif %}{{ site.name }}</title>
+  {% if description %}<meta name="description" content="{{ description }}">{% endif %}
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Google+Sans+Flex:opsz,wdth,wght@6..144,25..151,1..1000&family=Google+Sans+Text:ital,wght@0,400;0,500;0,700;1,400&family=Google+Sans+Mono:wght@400..700&display=swap">
+  <link rel="stylesheet" href="/assets/site.css">
+</head>
+<body>
+  <header class="top">
+    {% if page.url != "/" %}<a class="home" href="/">brianmickel.io</a>{% endif %}
+    <nav aria-label="Categories">
+      {%- for c in categories -%}
+        <a href="/{{ c.slug }}/"{% if category and category.slug == c.slug %} aria-current="page"{% endif %}>{{ c.name }}</a>
+      {%- endfor -%}
+    </nav>
+  </header>
+
+  <main>
+    {{ content }}
+  </main>
+
+  <footer class="foot">
+    <a href="{{ site.github }}">GitHub</a>
+    <a href="{{ site.linkedin }}">LinkedIn</a>
+    <a href="{{ site.source }}">Source</a>
+  </footer>
+</body>
+</html>

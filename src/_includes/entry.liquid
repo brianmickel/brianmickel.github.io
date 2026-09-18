@@ -1,0 +1,22 @@
+---
+layout: base.liquid
+---
+{%- assign cat = category | category -%}
+<article class="entry">
+  <header class="entry-head">
+    <h1 class="entry-title">{{ title }}</h1>
+    <p class="entry-meta">
+      <time datetime="{{ page.date | isoDate }}">{{ page.date | isoDate }}</time>
+      <a href="/{{ cat.slug }}/">{{ cat.name }}</a>
+      {%- if repo %}<a href="{{ repo }}">Repository</a>{% endif -%}
+      {%- if live %}<a href="{{ live }}">Live</a>{% endif -%}
+    </p>
+    {%- if summary %}<p class="entry-summary">{{ summary }}</p>{% endif -%}
+  </header>
+  {%- assign body = content | strip -%}
+  {%- if body != "" %}
+  <div class="prose">
+    {{ body }}
+  </div>
+  {%- endif %}
+</article>
