@@ -1,0 +1,26 @@
+[
+  {
+    "slug": "energy",
+    "name": "Energy & Renewables",
+    "tag": "energy",
+    "blurb": "Batteries, grids, and whether the numbers work."
+  },
+  {
+    "slug": "games",
+    "name": "Board games",
+    "tag": "games",
+    "blurb": "Set, Camel Up, Catan, euchre — and the probability underneath them."
+  },
+  {
+    "slug": "cas",
+    "name": "CAS",
+    "tag": "cas",
+    "blurb": "Computer algebra: building AnotherCAS on top of Algebrite."
+  },
+  {
+    "slug": "cycling",
+    "name": "Cycling & Infrastructure",
+    "tag": "cycling",
+    "blurb": "Bikes, and the infrastructure they run on."
+  }
+]
