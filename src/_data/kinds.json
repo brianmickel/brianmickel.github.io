@@ -1,0 +1,7 @@
+[
+  { "kind": "project", "slug": "projects", "name": "Projects", "blurb": "Things I built, dated to when I built them." },
+  { "kind": "note",    "slug": "notes",    "name": "Notes",    "blurb": "Short posts and things I learned." },
+  { "kind": "link",    "slug": "links",    "name": "Links",    "blurb": "Worth reading. One line each." },
+  { "kind": "lab",     "slug": "lab",      "name": "Lab",      "blurb": "Small interactive experiments." },
+  { "kind": "change",  "slug": "changes",  "name": "Changelog", "blurb": "What changed on this site." }
+]

@@ -1,13 +1,14 @@
 ---
 layout: base.liquid
 ---
-{%- assign cat = category | category -%}
+{%- assign k = kind | kind -%}
 <article class="entry">
   <header class="entry-head">
     <h1 class="entry-title">{{ title }}</h1>
     <p class="entry-meta">
       <time datetime="{{ page.date | isoDate }}">{{ page.date | isoDate }}</time>
-      <a href="/{{ cat.slug }}/">{{ cat.name }}</a>
+      <a href="/{{ k.slug }}/">{{ k.name }}</a>
+      {%- for slug in topics %}{% assign t = slug | topic %}<a href="/topics/{{ t.slug }}/">{{ t.name }}</a>{% endfor -%}
       {%- if repo %}<a href="{{ repo }}">Repository</a>{% endif -%}
       {%- if live %}<a href="{{ live }}">Live</a>{% endif -%}
     </p>

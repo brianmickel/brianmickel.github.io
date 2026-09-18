@@ -1,7 +1,7 @@
 ---
 title: Camel Up odds
 date: 2017-01-23
-category: games
+topics: [games]
 repo: https://github.com/brianmickel/camel-cup-game
 summary: An object model of the board game, with a pie chart of each leg's likely outcomes.
 ---

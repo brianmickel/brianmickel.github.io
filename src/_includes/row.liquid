@@ -1,9 +1,15 @@
-{%- assign cat = entry.data.category | category -%}
-<li class="row">
+{%- assign k = entry.data.kind | kind -%}
+{%- if entry.data.link %}{% assign href = entry.data.link %}{% elsif entry.url %}{% assign href = entry.url %}{% else %}{% assign href = false %}{% endif -%}
+<li class="row{% if show_kind == false %} row-nokind{% endif %}">
   <time class="row-date" datetime="{{ entry.date | isoDate }}">{{ entry.date | isoDate }}</time>
-  <a class="row-cat" href="/{{ cat.slug }}/">{{ cat.tag }}</a>
+  {%- if show_kind != false %}<a class="row-kind" href="/{{ k.slug }}/">{{ k.kind }}</a>{% endif %}
   <div class="row-main">
-    <a class="row-title" href="{{ entry.url }}">{{ entry.data.title }}</a>
+    {%- if href %}<a class="row-title" href="{{ href }}">{{ entry.data.title }}</a>{% else %}<span class="row-title">{{ entry.data.title }}</span>{% endif %}
     {%- if entry.data.summary %}<span class="row-summary">{{ entry.data.summary }}</span>{% endif -%}
   </div>
+  {%- if entry.data.topics.size > 0 %}
+  <span class="row-topics">
+    {%- for slug in entry.data.topics %}{% assign t = slug | topic %}<a href="/topics/{{ t.slug }}/">{{ t.name }}</a>{% endfor -%}
+  </span>
+  {%- endif %}
 </li>

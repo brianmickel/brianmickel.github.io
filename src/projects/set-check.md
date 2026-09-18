@@ -1,7 +1,7 @@
 ---
 title: Set Check
 date: 2025-12-14
-category: games
+topics: [games]
 repo: https://github.com/brianmickel/set-check
 live: https://brianmickel.io/set-check/
 summary: Photograph the board, find out whether a set remains.

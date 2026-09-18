@@ -1,0 +1,12 @@
+---
+layout: base.liquid
+---
+<article class="entry">
+  <header class="entry-head">
+    <h1 class="entry-title">{{ title }}</h1>
+    {%- if summary %}<p class="entry-summary">{{ summary }}</p>{% endif -%}
+  </header>
+  <div class="prose">
+    {{ content }}
+  </div>
+</article>

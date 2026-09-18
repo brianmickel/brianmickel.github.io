@@ -1,7 +1,7 @@
 ---
 title: Set finder
 date: 2018-10-08
-category: games
+topics: [games]
 repo: https://github.com/brianmickel/set-game-set-finder
 summary: A Python CLI that tells you whether a set is on the table, without telling you which.
 ---

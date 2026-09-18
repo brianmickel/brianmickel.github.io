@@ -1,7 +1,7 @@
 ---
 title: Battery arbitrage backtest
 date: 2026-01-28
-category: energy
+topics: [energy]
 repo: https://github.com/brianmickel/battery-backtest
 summary: Would a grid battery pay for itself on price arbitrage alone? In CAISO, not for about 150 years.
 ---
