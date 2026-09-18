@@ -1,0 +1,27 @@
+---
+layout: base.liquid
+pagination:
+  data: topicList
+  size: 1
+  alias: topic
+permalink: "/topics/{{ topic.slug }}/"
+eleventyComputed:
+  title: "{{ topic.name }}"
+  description: "{{ topic.blurb }}"
+---
+<section class="hero hero-small">
+  <p class="eyebrow">Topic</p>
+  <h1 class="page-title">{{ topic.name }}</h1>
+  <p class="tagline">{{ topic.blurb }}</p>
+</section>
+
+{%- assign items = collections.stream | byTopic: topic.slug -%}
+{%- if items.size > 0 -%}
+<ol class="stream" aria-label="{{ topic.name }}, newest first">
+  {%- for entry in items -%}
+    {% include "row.liquid" %}
+  {%- endfor -%}
+</ol>
+{%- else -%}
+<p class="empty">Nothing filed here yet.</p>
+{%- endif -%}

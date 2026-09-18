@@ -13,10 +13,13 @@
 <body>
   <header class="top">
     {% if page.url != "/" %}<a class="home" href="/">brianmickel.io</a>{% endif %}
-    <nav aria-label="Categories">
-      {%- for c in categories -%}
-        <a href="/{{ c.slug }}/"{% if category and category.slug == c.slug %} aria-current="page"{% endif %}>{{ c.name }}</a>
+    <nav aria-label="Sections">
+      {%- for k in kinds -%}
+        {%- assign href = "/" | append: k.slug | append: "/" -%}
+        <a href="{{ href }}"{% if page.url == href %} aria-current="page"{% endif %}>{{ k.name }}</a>
       {%- endfor -%}
+      <a href="/now/"{% if page.url == "/now/" %} aria-current="page"{% endif %}>Now</a>
+      <a href="/about/"{% if page.url == "/about/" %} aria-current="page"{% endif %}>About</a>
     </nav>
   </header>
 

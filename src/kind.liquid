@@ -1,0 +1,27 @@
+---
+layout: base.liquid
+pagination:
+  data: kinds
+  size: 1
+  alias: kind
+permalink: "/{{ kind.slug }}/"
+eleventyComputed:
+  title: "{{ kind.name }}"
+  description: "{{ kind.blurb }}"
+---
+<section class="hero hero-small">
+  <h1 class="page-title">{{ kind.name }}</h1>
+  <p class="tagline">{{ kind.blurb }}</p>
+</section>
+
+{%- assign items = collections.stream | byKind: kind.kind -%}
+{%- assign show_kind = false -%}
+{%- if items.size > 0 -%}
+<ol class="stream" aria-label="{{ kind.name }}, newest first">
+  {%- for entry in items -%}
+    {% include "row.liquid" %}
+  {%- endfor -%}
+</ol>
+{%- else -%}
+<p class="empty">Nothing filed here yet.</p>
+{%- endif -%}
