@@ -12,7 +12,6 @@ layout: base.liquid
       {%- if repo %}<a href="{{ repo }}">Repository</a>{% endif -%}
       {%- if live %}<a href="{{ live }}">Live</a>{% endif -%}
     </p>
-    {%- if summary %}<p class="entry-summary">{{ summary }}</p>{% endif -%}
   </header>
   {%- assign body = content | strip -%}
   {%- if body != "" %}
