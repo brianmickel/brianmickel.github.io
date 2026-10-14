@@ -11,5 +11,12 @@
   "license": "UNLICENSED",
   "devDependencies": {
     "@11ty/eleventy": "^3.1.6"
+  },
+  "overrides": {
+    "gray-matter": {
+      "js-yaml": {
+        "argparse": "^2.0.1"
+      }
+    }
   }
 }
