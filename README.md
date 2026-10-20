@@ -1,6 +1,6 @@
 # brianmickel.io
 
-Eleventy site, deployed to GitHub Pages from the `gh-pages` branch on every push to `master`.
+Eleventy site, deployed to GitHub Pages from the `gh-pages` branch on every push to `main`.
 
 ```
 npm install
